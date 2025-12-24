@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🎉</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<audio autoplay loop id="bgMusic">
+  <source src="assets/music.mp3" type="audio/mp3">
+</audio>
+
+<div class="music-control" onclick="toggleMusic()">🎵</div>
+
+<section class="hero bg-photo">
+  <div class="overlay"></div>
+
+  <h1 class="fade-in">Selamat Ulang Tahun 🎂</h1>
+  <p class="fade-in delay">
+    Semoga hari ini penuh kebahagiaan, cinta, dan kenangan indah
+  </p>
+
+  <div class="btn-group">
+    <a href="photos.html">📸 Album Foto</a>
+    <a href="video.html">🎬 Video Spesial</a>
+    <a href="surat.html">💌 Buka Surat</a>
+  </div>
+</section>
+
+
+<div class="balloons"></div>
+
+<script src="js/script.js"></script>
+<div class="balloon-container">
+  <span class="balloon"></span>
+  <span class="balloon"></span>
+  <span class="balloon"></span>
+  <span class="balloon"></span>
+  <span class="balloon"></span>
+</div>
+<canvas id="confetti"></canvas>
+<div class="hearts">
+  <span>❤️</span>
+  <span>💖</span>
+  <span>🎂</span>
+  <span>✨</span>
+</div>
+
+
+</body>
+</html>
