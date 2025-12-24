@@ -47,11 +47,25 @@ const allowedEmails = [
 function checkEmail() {
   const input = document.getElementById("emailInput").value.trim().toLowerCase();
   const error = document.getElementById("loginError");
+  const lockIcon = document.getElementById("lockIcon");
+  const title = document.getElementById("loginTitle");
+  const desc = document.getElementById("loginDesc");
 
   if (allowedEmails.includes(input)) {
-    localStorage.setItem("authorized", "true");
-    window.location.href = "index.html";
+    error.innerText = "";
+    lockIcon.innerText = "🔓";
+    lockIcon.classList.add("unlock");
+    title.innerText = "Akses Dibuka";
+    title.classList.add("success");
+    desc.innerText = "Selamat datang ✨";
+
+    setTimeout(() => {
+      localStorage.setItem("authorized", "true");
+      window.location.href = "index.html";
+    }, 1200);
+
   } else {
     error.innerText = "❌ Email tidak terdaftar";
   }
 }
+

@@ -425,3 +425,89 @@ header a {
   font-size: 14px;
   color: red;
 }
+
+/* LOCK ICON */
+.lock-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+  transition: all 0.6s ease;
+}
+
+/* ANIMASI UNLOCK */
+.unlock {
+  animation: unlockAnim 1.2s forwards;
+}
+
+@keyframes unlockAnim {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  40% {
+    transform: rotate(-20deg) scale(1.1);
+  }
+  60% {
+    transform: rotate(20deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0) scale(1.2);
+  }
+}
+
+/* SUCCESS STATE */
+.success {
+  color: #4CAF50;
+}
+
+.page-animate {
+  animation: pageIn 1.2s ease forwards;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(255,255,255,0.4); }
+  50% { text-shadow: 0 0 20px rgba(255,200,255,0.9); }
+  100% { text-shadow: 0 0 5px rgba(255,255,255,0.4); }
+}
+
+.btn-group a {
+  opacity: 0;
+  animation: fadeUp 0.8s forwards;
+}
+
+.btn-group a:nth-child(1) { animation-delay: 0.5s; }
+.btn-group a:nth-child(2) { animation-delay: 0.8s; }
+.btn-group a:nth-child(3) { animation-delay: 1.1s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-group a {
+  transition: all 0.3s ease;
+}
+
+.btn-group a:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}

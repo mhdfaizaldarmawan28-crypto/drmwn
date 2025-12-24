@@ -10,14 +10,17 @@
 <body class="login-page">
 
 <div class="login-box">
-  <h2>🔐 Akses Website</h2>
-  <p>Masukkan email yang terdaftar</p>
+  <div class="lock-icon" id="lockIcon">🔒</div>
+
+  <h2 id="loginTitle">Akses Website</h2>
+  <p id="loginDesc">Masukkan email yang terdaftar</p>
 
   <input type="email" id="emailInput" placeholder="email@example.com">
   <button onclick="checkEmail()">Masuk</button>
 
   <p id="loginError"></p>
 </div>
+
 
 <script src="js/script.js"></script>
 </body>
